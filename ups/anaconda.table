@@ -1,2 +1,2 @@
 envPrepend(PATH, ${PRODUCT_DIR}/bin)
-envPrepend(DYLD_FALLBACK_LIBRARY_PATH, ${PREFIX}/lib)
+envPrepend(DYLD_FALLBACK_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
