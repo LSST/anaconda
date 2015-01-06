@@ -25,9 +25,6 @@ build() { :; }
 
 install()
 {
-	echo "SFD says"
-	export DYLD_FALLBACK_LIBRARY_PATH=$PREFIX'/pkgs/python-2.7.8-1/lib':$DYLD_FALLBACK_LIBRARY_PATH
-	echo $DYLD_FALLBACK_LIBRARY_PATH
 	clean_old_install
 
 	bash installer.sh -b -p "$PREFIX"
