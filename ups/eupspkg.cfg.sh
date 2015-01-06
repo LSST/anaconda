@@ -26,7 +26,7 @@ build() { :; }
 install()
 {
 	echo "SFD says"
-        echo $DYLD_FALLBACK_LIBRARY_PATH
+	echo $DYLD_FALLBACK_LIBRARY_PATH
 	clean_old_install
 
 	bash installer.sh -b -p "$PREFIX"
