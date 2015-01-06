@@ -26,6 +26,7 @@ build() { :; }
 install()
 {
 	echo "SFD says"
+	export DYLD_FALLBACK_LIBRARY_PATH=$PREFIX:$DYLD_FALLBACK_LIBRARY_PATH
 	echo $DYLD_FALLBACK_LIBRARY_PATH
 	clean_old_install
 
