@@ -26,6 +26,8 @@ build() { :; }
 install()
 {
 	clean_old_install
+        echo 'SFD in install'
+        echo $PREFIX
 
 	bash installer.sh -b -p "$PREFIX"
 
