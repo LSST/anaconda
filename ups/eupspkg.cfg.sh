@@ -26,8 +26,12 @@ build() { :; }
 install()
 {
 	clean_old_install
-        echo 'SFD in install'
-        echo $PREFIX
+	echo 'SFD in install'
+	echo $PREFIX
+
+	if [[ $(uname -s) = Darwin* ]]; then
+		install_name_tool -d $PREFIX/lib/libpython2.7.dylib $PREFIX/lib/libpython2.7.dylib
+	fi
 
 	bash installer.sh -b -p "$PREFIX"
 
