@@ -30,7 +30,7 @@ install()
 	echo $PREFIX
 
 	if [[ $(uname -s) = Darwin* ]]; then
-		install_name_tool -d $PREFIX/lib/libpython2.7.dylib $PREFIX/lib/libpython2.7.dylib
+		install_name_tool -id $PREFIX/lib/libpython2.7.dylib $PREFIX/lib/libpython2.7.dylib
 	fi
 
 	bash installer.sh -b -p "$PREFIX"
