@@ -29,11 +29,11 @@ install()
 	echo 'SFD in install'
 	echo $PREFIX
 
+	bash installer.sh -b -p "$PREFIX"
+
 	if [[ $(uname -s) = Darwin* ]]; then
 		install_name_tool -id $PREFIX/lib/libpython2.7.dylib $PREFIX/lib/libpython2.7.dylib
 	fi
-
-	bash installer.sh -b -p "$PREFIX"
 
 	install_ups
 }
