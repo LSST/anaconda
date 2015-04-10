@@ -1,13 +1,15 @@
 # EupsPkg config file. Sourced by 'eupspkg'
 
+ANACONDA_VERSION=2.2.0
+
 prep()
 {
 	# Select the apropriate Anaconda distribution
 	OS=$(uname -s -m)
 	case "$OS" in
-		"Linux x86_64")		FN=Anaconda-2.1.0-Linux-x86_64.sh ;;
-		"Linux "*) 		FN=Anaconda-2.1.0-Linux-x86.sh ;;
-		"Darwin x86_64")	FN=Anaconda-2.1.0-MacOSX-x86_64.sh ;;
+		"Linux x86_64")		FN=Anaconda-$ANACONDA_VERSION-Linux-x86_64.sh ;;
+		"Linux "*) 		FN=Anaconda-$ANACONDA_VERSION-Linux-x86.sh ;;
+		"Darwin x86_64")	FN=Anaconda-$ANACONDA_VERSION-MacOSX-x86_64.sh ;;
 		*) 			die "unsupported OS or architecture ($OS). try installing Anaconda manually."
 	esac
 
